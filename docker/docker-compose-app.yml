@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+
+  bookmarks-ui:
+    build: ../.
+    ports:
+      - "18080:8080"
+    restart: unless-stopped
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
